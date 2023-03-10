@@ -58,7 +58,7 @@ export default function Home() {
   //     });
   // };
 
-  const submit = async (e: any) => {
+  const submit = async (e?: any) => {
     setSentence("");
     setIsloading(true);
     const response = await fetch("/api/sentence-rephraser", {

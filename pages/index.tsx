@@ -19,7 +19,7 @@ const poppins = Poppins({
 });
 
 export default function Home() {
-  const [length, setLength] = useState("short");
+  // const [length, setLength] = useState("short");
   const [type, setType] = useState("Casual");
   const [sentence, setSentence] = useState<any>("");
   const [input, setInput] = useState("");

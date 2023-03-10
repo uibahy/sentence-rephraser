@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    font-family: 'Poppins';
+  }
+}
+
+html,
+body {
+  margin: 0;
+  font-family: 'Poppins';
+  align-items: center;
+  min-height: 100vh;
+}
+:root {
+  font-family: 'Poppins';
+  line-height: 1.5;
+  font-weight: 500;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0D0D0D;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  align-items: center;
+  height: 100vh;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 85%;
+  padding: 20px 4px;
+  border-top: 1px solid #1A1A1A;
+  margin-top: auto;
+}
+.footer p{
+  font-size: 14px;
+  color: hsla(0, 0%, 55%, 1);
+  width: 70%;
+  text-align: left;
+}
+a{
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+.icons{
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  height: 40%;
+}
+.icons div{
+  border-left: 1px solid #383838;
+  height: 20px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 85%;
+  padding: 20px 4px;
+  border-bottom: 1px solid #1A1A1A;
+  margin-bottom: 44px;
+}
+.navbar a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 12px;
+  background: #1A1A1A;
+  border: 1px solid #272727;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.25s;
+  font-size: 14px;
+  font-weight: 600;
+}
+.navbar a:hover {
+  background-color: #242424;
+}
+.navbar a:focus,
+.navbar a:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  align-items: center;
+  height: 100vh;
+}
+button {
+  border-radius: 4px;
+  border: 1px solid transparent;
+  padding: 12px 24px;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: #ffffff;
+  color: #0D0D0D;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+button:hover {
+  background-color: #e7e7e7;
+}
+button:focus,
+button:focus-visible {
+  outline: none;
+}
+
+.input{
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  padding: 14px 12px;
+  font-size: 1em;
+  background-color: #1A1A1A;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.input:hover {
+  border-color: #4c4c4c;
+}
+.input:focus,
+.input:focus-visible {
+  border: 1px solid transparent;
+  outline: none;
+  background-color: #222222;
+}
+
+.image {
+  margin-top: 32px;
+}
+.image img{
+  border-radius: 16px;
+  border: 4px solid #424242;
+}
+.loading{
+  border-radius: 20px;
+  border: 4px solid #42424225;
+} 
+
+.selected-item {
+  text-align: center;
+}
+
+.controls-container {
+  --highlight-width: auto;
+  --highlight-x-pos: 0;
+
+  display: flex;
+  width: 100%;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background: #1A1A1A;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  width: 100%;
+  padding: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.controls input {
+  opacity: 0;
+  margin: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  cursor: pointer;
+  height: 100%;
+}
+
+.segment {
+  min-width: 50%;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.segment label {
+  cursor: pointer;
+  display: block;
+  padding: 8px 12px;
+  transition: color 0.5s ease;
+}
+
+.segment.active label {
+  color: #fff;
+  border-radius: 4px;
+  background-color: #272727;
+  transition: background-color 0.35s ease;
+}
+
+.segment.inactive{
+  color: #8C8C8C;
+  transition: background-color 0.35s ease;
+}
+
+.segment.inactive:hover{
+  color: white;
+}

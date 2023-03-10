@@ -89,7 +89,7 @@ export default function Home() {
       const { value, done: doneReading } = await reader.read();
       done = doneReading;
       const chunkValue = decoder.decode(value);
-      setSentence((prev) => prev + chunkValue);
+      setSentence((prev: any) => prev + chunkValue);
     }
     setIsloading(false);
   };

@@ -7,7 +7,7 @@ import Image from "next/image";
 
 function Footer() {
   return (
-    <div className="footer">
+    <div className="footer mb-3">
       <p>
         Crafted by the holy moly designer{" "}
         <a href="https://github.com/uibahy" target={"_blank"}>

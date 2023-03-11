@@ -160,7 +160,7 @@ export default function Home() {
                 onKeyDown={(e) => {
                   e.key === "Enter" ? submit() : null;
                 }}
-                className="input placeholder-grey-60"
+                className="input placeholder-grey-60 sm:placeholder:text-sm"
                 rows={3}
                 placeholder="Hello World."
               ></textarea>

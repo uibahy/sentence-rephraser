@@ -10,7 +10,6 @@ import ReactLoading from "react-loading";
 import SegmentedControl from "@/components/SegmentedControl";
 import Rewrite from "../public/rewrite.svg";
 import toast, { Toaster } from "react-hot-toast";
-import { MouseEvent, KeyboardEvent } from "react";
 
 const poppins = Poppins({
   weight: ["400", "700"],

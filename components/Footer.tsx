@@ -12,12 +12,11 @@ function Footer() {
         Powered by{" "}
         <a href="https://github.com/uibahy" target={"_blank"}>
           ChatGPT
-        </a>
+        </a>{" "}
         and{" "}
         <a href="https://vercel.com" target={"_blank"}>
           Vercel Edge Functions.
         </a>
-        .
       </p>
       <div className="icons">
         <a target={"_blank"} href="https://github.com/uibahy">

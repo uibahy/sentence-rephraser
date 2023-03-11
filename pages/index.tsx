@@ -22,7 +22,7 @@ export default function Home() {
   const [length, setLength] = useState("short");
   const [type, setType] = useState<"Casual" | "Formal">("Casual");
   const [sentence, setSentence] = useState<string>("");
-  const [input, setInput] = useState<string>("");
+  const [input, setInput] = useState<string>("hi");
   const [isLoading, setIsloading] = useState<boolean>(false);
 
   const prompt = `rewrite the following "${input}", make sure to keep the same meaning, ${
@@ -59,7 +59,6 @@ export default function Home() {
       throw new Error(response.statusText);
     }
 
-    // This data is a ReadableStream
     const data = response.body;
     if (!data) return;
 
@@ -139,13 +138,15 @@ export default function Home() {
                 onKeyDown={(e) => {
                   e.key === "Enter" ? submit(e) : null;
                 }}
-                className="input cursor-text placeholder-grey-60 sm:placeholder:text-sm"
+                className="input cursor-text placeholder-grey-60 sm:placeholder:text-sm required:border-1 required:border-err-10"
+                required={!input}
                 rows={3}
                 placeholder="Hello World."
+                // disabled={isLoading || !input}
               ></textarea>
               <button
                 onClick={(e) => submit(e)}
-                className="flex flex-row justify-center items-center gap-1 sm:text-sm"
+                className="flex flex-row justify-center items-center gap-1 sm:text-sm disabled:cursor-not-allowed"
                 disabled={isLoading || !input}
               >
                 {isLoading ? (

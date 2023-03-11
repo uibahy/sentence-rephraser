@@ -103,7 +103,7 @@ export default function Home() {
         <meta property="og:title" content="Sentence Rephraser" />
         <meta
           property="og:description"
-          content="Improve your writing with ChatGPT, a cutting-edge language model that offers personalized writing suggestions, grammatical corrections, and vocabulary expansion in real-time. Use it as a writing assistant or for generating ideas, and it can handle a variety of writing styles and genres. Sign up now to take your writing skills to the next level."
+          content="Use ChatGPT to improve your writing with personalized suggestions, grammatical corrections, and vocabulary expansion."
         />
         <meta name="twitter:card" content="summary_large_image"></meta>
         <meta

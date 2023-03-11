@@ -181,7 +181,7 @@ button:focus-visible {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  background: linear-gradient(216.99deg, #1A1A1A 21.48%, rgba(26, 26, 26, 0) 220.62%);
+  background: linear-gradient(125.96deg, #1A1A1A -16.13%, rgba(26, 26, 26, 0) 216.17%);
   border-top: 1px solid #272727;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   border-radius: 8px;

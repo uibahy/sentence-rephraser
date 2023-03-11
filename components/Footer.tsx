@@ -9,13 +9,13 @@ function Footer() {
   return (
     <div className="footer mb-3">
       <p>
-        Crafted by the holy moly designer{" "}
+        Powered by{" "}
         <a href="https://github.com/uibahy" target={"_blank"}>
-          bahy
+          ChatGPT
         </a>
-        , and flawlessly deployed by{" "}
+        and{" "}
         <a href="https://vercel.com" target={"_blank"}>
-          Vercel
+          Vercel Edge Functions.
         </a>
         .
       </p>

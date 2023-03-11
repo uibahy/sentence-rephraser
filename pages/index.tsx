@@ -157,7 +157,7 @@ export default function Home() {
                 onKeyDown={(e) => {
                   e.key === "Enter" ? submit() : null;
                 }}
-                className="input placeholder-grey-60 sm:placeholder:text-sm"
+                className="input cursor-text placeholder-grey-60 sm:placeholder:text-sm"
                 rows={3}
                 placeholder="Hello World."
               ></textarea>
@@ -184,7 +184,7 @@ export default function Home() {
             {sentence ? (
               <div
                 onClick={copy}
-                className="cursor-copy inline-block w-full bg-grey-90 p-4 border-solid border-2 border-grey-80 rounded-lg mt-4 mb-8 sm:max-w-10/12 sm:text-sm"
+                className="cursor-copy inline-block w-full transition bg-grey-90 hover:bg-grey-80  p-4 border-solid border-2 border-grey-80 rounded-lg mt-4 mb-8 sm:max-w-10/12 sm:text-sm"
               >
                 <p className="max-w-auto m-auto">{sentence}</p>
                 {/* {sentence} */}

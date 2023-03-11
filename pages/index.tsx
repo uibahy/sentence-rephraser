@@ -20,9 +20,9 @@ const poppins = Poppins({
 
 export default function Home() {
   const [length, setLength] = useState("short");
-  const [type, setType] = useState("Casual");
-  const [sentence, setSentence] = useState<any>("");
-  const [input, setInput] = useState("");
+  const [type, setType] = useState<"Casual" | "Formal">("Casual");
+  const [sentence, setSentence] = useState<string>("");
+  const [input, setInput] = useState<string>("");
   const [isLoading, setIsloading] = useState<boolean>(false);
 
   const prompt = `rewrite the following "${input}", make sure to keep the same meaning, ${
@@ -42,23 +42,7 @@ export default function Home() {
     });
   };
 
-  // const submit = async () => {
-  //   setIsloading(true);
-  //   axios
-  //     .post("/api/sentence-rephraser", {
-  //       prompt: prompt,
-  //     })
-  //     .then(function (res: any) {
-  //       setIsloading(false);
-  //       setSentence(res.data);
-  //       console.log(res);
-  //     })
-  //     .catch(function (err: any) {
-  //       console.log(err);
-  //     });
-  // };
-
-  const submit = async (e?: any) => {
+  const submit = async (e: any) => {
     setSentence("");
     setIsloading(true);
     const response = await fetch("/api/sentence-rephraser", {
@@ -77,9 +61,7 @@ export default function Home() {
 
     // This data is a ReadableStream
     const data = response.body;
-    if (!data) {
-      return;
-    }
+    if (!data) return;
 
     const reader = data.getReader();
     const decoder = new TextDecoder();
@@ -136,7 +118,7 @@ export default function Home() {
             <div className="flex flex-col w-full gap-2 mt-4">
               <SegmentedControl
                 name="group-2"
-                callback={(val: string) => setType(val)}
+                callback={(val: "Casual" | "Formal") => setType(val)}
                 controlRef={useRef()}
                 defaultIndex={0}
                 segments={[
@@ -155,17 +137,16 @@ export default function Home() {
               <textarea
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={(e) => {
-                  e.key === "Enter" ? submit() : null;
+                  e.key === "Enter" ? submit(e) : null;
                 }}
                 className="input cursor-text placeholder-grey-60 sm:placeholder:text-sm"
                 rows={3}
                 placeholder="Hello World."
               ></textarea>
               <button
-                onClick={() => {
-                  submit();
-                }}
+                onClick={(e) => submit(e)}
                 className="flex flex-row justify-center items-center gap-1 sm:text-sm"
+                disabled={isLoading || !input}
               >
                 {isLoading ? (
                   <ReactLoading

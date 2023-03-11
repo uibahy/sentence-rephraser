@@ -21,9 +21,7 @@ const poppins = Poppins({
 export default function Home() {
   const [length, setLength] = useState("short");
   const [type, setType] = useState("Casual");
-  const [sentence, setSentence] = useState<any>(
-    "I'm an ICT student and a Backend Developer at ProBot. I love creating dependable software and sharing my knowledge with others."
-  );
+  const [sentence, setSentence] = useState<any>("");
   const [input, setInput] = useState("");
   const [isLoading, setIsloading] = useState<boolean>(false);
 
@@ -187,7 +185,7 @@ export default function Home() {
             {sentence ? (
               <div
                 onClick={copy}
-                className="cursor-copy inline-block w-full bg-grey-90 p-4 border-solid border-2 border-grey-80 rounded-lg mt-4 sm:max-w-10/12 sm:text-sm"
+                className="cursor-copy inline-block w-full bg-grey-90 p-4 border-solid border-2 border-grey-80 rounded-lg mt-4 mb-8 sm:max-w-10/12 sm:text-sm"
               >
                 <p className="max-w-auto m-auto">{sentence}</p>
                 {/* {sentence} */}

@@ -181,9 +181,10 @@ button:focus-visible {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  background: #1A1A1A;
+  background: linear-gradient(216.99deg, #1A1A1A 21.48%, rgba(26, 26, 26, 0) 220.62%);
+  border-top: 1px solid #272727;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
+  border-radius: 8px;
   width: 100%;
   padding: 6px;
   overflow: hidden;
@@ -220,7 +221,7 @@ button:focus-visible {
 .segment.active label {
   color: #fff;
   border-radius: 4px;
-  background-color: #272727;
+  background-color: #2d2d2d;
   transition: background-color 0.35s ease;
 }
 
@@ -231,6 +232,7 @@ button:focus-visible {
 
 .segment.inactive:hover{
   color: white;
+  background-color: #1b1b1b;
 }
 
 @media (max-width: 700px) {

@@ -12,6 +12,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      lineHeight: {
+        'extra-loose': '2.5',
+        '11': '3.5rem',
+      },
+      width: {
+        '128': '32rem',
+      },
       fontFamily: {
         sans: ['Poppins', ...defaultTheme.fontFamily.sans],
       },

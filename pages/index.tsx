@@ -21,7 +21,9 @@ const poppins = Poppins({
 export default function Home() {
   const [length, setLength] = useState("short");
   const [type, setType] = useState("Casual");
-  const [sentence, setSentence] = useState<any>("");
+  const [sentence, setSentence] = useState<any>(
+    "I'm an ICT student and a Backend Developer at ProBot. I love creating dependable software and sharing my knowledge with others."
+  );
   const [input, setInput] = useState("");
   const [isLoading, setIsloading] = useState<boolean>(false);
 
@@ -130,11 +132,11 @@ export default function Home() {
             }}
           />
           <Navbar />
-          <div className="flex flex-col gap-6 max-w-full items-center">
-            <h1 className="flex flex-col gap-6 text-center w-4/6 sm:w-10/12 font-bold text-5xl sm:text-4xl">
+          <div className="flex flex-col gap-6 items-center w-128 sm:w-10/12">
+            <h1 className="flex flex-col gap-6 text-center leading-11 font-bold text-5xl sm:text-4xl">
               Boost your writing using chatGPT
             </h1>
-            <div className="flex flex-col w-4/6 gap-2 mt-4 sm:w-10/12">
+            <div className="flex flex-col w-full gap-2 mt-4">
               <SegmentedControl
                 name="group-2"
                 callback={(val: string) => setType(val)}
@@ -160,13 +162,13 @@ export default function Home() {
                 }}
                 className="input placeholder-grey-60"
                 rows={3}
-                placeholder="Write or paste your text here."
+                placeholder="Hello World."
               ></textarea>
               <button
                 onClick={() => {
                   submit();
                 }}
-                className="flex flex-row justify-center items-center gap-1"
+                className="flex flex-row justify-center items-center gap-1 sm:text-sm"
               >
                 {isLoading ? (
                   <ReactLoading
@@ -185,9 +187,10 @@ export default function Home() {
             {sentence ? (
               <div
                 onClick={copy}
-                className="cursor-copy flex text-center bg-grey-90 p-4 max-w-4/6 border-solid border-2 border-grey-80 rounded-lg mt-4 sm:max-w-10/12"
+                className="cursor-copy inline-block w-full bg-grey-90 p-4 border-solid border-2 border-grey-80 rounded-lg mt-4 sm:max-w-10/12 sm:text-sm"
               >
-                {sentence}
+                <p className="max-w-auto m-auto">{sentence}</p>
+                {/* {sentence} */}
               </div>
             ) : null}
             {/* <div className="flex text-center bg-grey-90 p-4 max-w-4/6 border-solid border-2 border-grey-80 rounded-lg mt-4">

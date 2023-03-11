@@ -232,3 +232,9 @@ button:focus-visible {
 .segment.inactive:hover{
   color: white;
 }
+
+@media (max-width: 700px) {
+  .controls {
+    font-size: 14px;
+  }
+}

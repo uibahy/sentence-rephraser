@@ -1,4 +1,8 @@
-[![](https://media.discordapp.net/attachments/766626153267855361/1082740719791390860/Frame_1054.png?width=1984&height=520)](https://ai.bahy.design/)
+[![](https://media.discordapp.net/attachments/863411239668940800/1084086897040691240/aaaa.png?width=1984&height=738)](https://rephraser.bahy.design/)
+
+## Sentence Rephraser
+
+Use ChatGPT to improve your writing with personalized suggestions, grammatical corrections, and vocabulary expansion.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

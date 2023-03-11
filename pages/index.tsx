@@ -5,7 +5,6 @@ import { useState, useRef } from "react";
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import axios from "axios";
 import ReactLoading from "react-loading";
 import SegmentedControl from "@/components/SegmentedControl";
 import Rewrite from "../public/rewrite.svg";
